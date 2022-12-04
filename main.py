@@ -34,11 +34,6 @@ async def read_item(number: Union[str, None] = None):
     except:
         return f"{number} to nie jest liczba"
 
-    if(number%2 == 0):
-        return 1
-    else:
-        return 0
-
 @app.post("/picture/invert")
 async def UploadImage(file: bytes = File(...)):
     print(type(file))
